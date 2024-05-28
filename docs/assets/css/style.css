@@ -1,0 +1,19 @@
+header {
+    color: rgb(185, 0, 0);
+    background-color: #3c3c3c;
+    width: 100%;
+    display: flex;
+    align-items: right;
+    padding: 20px;
+}
+
+header ul {
+    display: flex;
+}
+
+
+nav {
+    text-align: right;
+    position: absolute;
+    right: 10%;
+}
