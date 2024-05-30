@@ -1,3 +1,7 @@
+# Deployed Application
+![Image preview of deployed application](docs/assets/images/application-preview.png)
+Deployed Application is accessible at [this link](https://anaz0004.github.io/module-2-challenge/)!
+
 # Module 02 Challenge: Professional Portfolio
 
 The developer will build a professional portfolio to showcase skills and talents to employers. The most effective portfolio displays highlights and the thoughts processes behind them. A portfolio is essential for employment success.
