@@ -1,9 +1,14 @@
 :root {
     --red: rgb(185, 0, 0);
+    --shadow-red: rgba(185, 0, 0, 0.2);
     --dark-red: rgb(135, 0, 0);
     --oled-black: #000;
     --dark-grey: #1c1c1c;
-    --light-grey: #909090;
+    --light-grey: #6b6b6b;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -19,15 +24,17 @@ header {
 }
 
 header h1 {
-    background-color: var(--red);
+    background-color: var(--light-grey);
     padding: 20px 20px 20px 5%;
     color: var(--dark-grey);
     font-size: 300%;
+    border-radius: 0px 30px 30px 0px;
 }
 
 nav {
     background-color: var(--light-grey);
     padding: 15px;
+    border-radius: 20px;
     position: relative;
     right: 25px;
 }
@@ -40,11 +47,11 @@ nav ul {
 
 nav ul li {
     padding:1% auto;
-    border-bottom: 3px solid var(--dark-red)
+    border-bottom: 2px solid var(--dark-red);
 }
 
 nav a {
-    color: var(--dark-red);
+    color: var(--dark-grey);
     font-weight: bold;
     font-size: 150%;
     text-decoration: none;
@@ -56,15 +63,185 @@ nav a:hover {
     border-bottom: 5px solid var(--red);
 }
 
+main {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:50px;
+    background-color: var(--light-grey);
+    margin: 1%;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+main section {
+    display: flex;
+}
+
+main section h2 {
+    color: var(--dark-red);
+    font-size: 200%;
+    min-width: 200px;
+    border-right: 5px solid var(--dark-red);
+}
+
+main section h3 {
+    color: var(--dark-red);
+    font-size: 175%;
+}
+
+article p {
+    font-size: 125%;
+    font-weight: bold;
+    color: var(--dark-grey);
+}
+
+#an {
+    color: var(--dark-red)
+}
+
+#hero {
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/hero-image.png)
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
+}
+
+#about-me article {
+    margin: 2%;
+    display:flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-left: 25px;
+}
+
+#about-me article img {
+    height: 100%;
+    width: auto;
+    border: 5px dashed var(--dark-red)
+}
+
+#about-me article p {
+    padding-left: 25px;
+}
+
+#work ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#work ul li {
+    position: relative;
+    width: 46%;
+    margin: 2%;
+}
+
+#work ul li img {
+    width: 100%;
+    border: 5px dashed var(--dark-red)
+    
+}
+
+#work ul li article {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    bottom: 20px;
+    left: 20px;
+    padding: 20px;
+    background-color: var(--light-grey);
+    border-radius: 20px;
+}
+
+#work ul li article p {
+    color: var(--dark-grey);
+    font-weight: bold;
+    font-size: 125%;
+}
+
+#work ul li:first-child {
+    width: 100%;
+}
+
+#work ul li:hover {
+    .shadow{
+        opacity: 0;
+    }
+}
+
+#contact-me article {
+    margin: 2%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between left;
+    gap: 10px;
+}
+
+#contact-me p {
+    border-bottom: 2px solid var(--dark-red);
+}
+
+#contact-me p:hover {
+    font-weight:bolder;
+    color: var(--red);
+    border-bottom: 5px solid var(--red);
+}
+
+.shadow {
+    pointer-events: none;
+    box-shadow: inset 100em 100em var(--shadow-red);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
 @media screen and (max-width: 992px) {
     header {
         flex-direction: column;
     }
     header h1 {
         padding: 20px;
+        border-radius: 20px;
     }
     nav {
         margin-top: 20px;
         position: static;
+    }
+    main {
+        gap:25px;
+    }
+    #about-me article {
+        flex-direction: column;
+        align-items: center;
+    }
+    #about-me article img {
+        height: 200px;
+        width: 150px;
+    }
+    #about-me article {
+        padding: 10px 0;
+    }
+    #work ul li {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main section {
+        flex-direction: column;
+    }
+    main section h2 {
+        border-right: 0;
+        border-bottom: 5px solid var(--dark-red);
     }
 }
