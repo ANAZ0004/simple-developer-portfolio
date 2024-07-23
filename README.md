@@ -1,6 +1,6 @@
 # Deployed Application
 ![Image preview of deployed application](docs/assets/images/application-preview.png)
-Deployed Application is accessible at [this link](https://anaz0004.github.io/module-2-challenge/)!
+Deployed Application is accessible at [this link](https://anaz0004.github.io/simple-developer-portfolio/)!
 
 # Module 02 Challenge: Professional Portfolio
 
